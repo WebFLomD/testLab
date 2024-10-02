@@ -1,0 +1,143 @@
+:root{
+    --color-Black: rgba(25, 28, 31, 1);
+    --color-Dark-gray: rgba(94, 100, 106, 1);
+    --color-Gray: rgba(131, 137, 143, 1);
+    --color-Mid-grey: rgba(194, 200, 205, 1);
+    --color-Light-gray: rgba(236, 239, 242, 1);
+    --color-Extralight-gray: rgba(246, 248, 250, 1);
+    --color-White: rgba(255, 255, 255, 1);
+
+    --color-Dangerous: rgba(241, 54, 54, 1);
+    --color-Green-success: rgba(37, 205, 130, 1);
+
+    --color-Primary-disabled: rgba(171, 202, 230, 1);
+    --color-Primary: rgba(42, 108, 234, 1);
+    --color-Primary-hover: rgba(57, 125, 255, 1);
+
+    --font-family-Graphik-LCG: 'Graphik LCG';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--font-family-Graphik-LCG), serif;
+}
+
+/* Header */
+.site-header{
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 28px 352px;
+}
+
+.site-navHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logoCompany{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--color-White);
+}
+
+.logoShar{
+    display: flex;
+    align-items: center;
+
+    span{
+        display: inline-block;
+        position: relative;
+
+        width: 24px;
+        height: 24px;
+
+        border-radius: 50%;
+    }
+}
+
+.logoShar-blue{
+    background: var(--color-Primary);
+    z-index: 1;
+}
+
+.logoShar-while{
+    right: 10px;
+
+    background: var(--color-White);
+    z-index: 0;
+}
+
+.site-allMenuItem-title{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    list-style: none;
+}
+
+.menuItem-title{
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+
+    color: var(--color-White);
+    text-decoration: none;
+
+    &:after{
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--color-White);
+        transition: 0.3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.menu-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Main */
+.mainCallout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 960px;
+
+    text-align: center;
+    color: var(--color-White);
+
+    padding: 313px 586px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(42, 108, 234, .8), rgba(42, 108, 234, .8)), url("../img/Lunch_atop_a_Skyscraper.png");
+
+    h3, h4{
+        display: none;
+    }
+}
