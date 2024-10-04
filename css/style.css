@@ -22,6 +22,8 @@
     padding: 0;
     box-sizing: border-box;
 
+    /* border: 5px solid #000; */
+
     font-family: var(--font-family-Graphik-LCG), serif;
 }
 
@@ -30,13 +32,18 @@
     display: block;
     position: absolute;
     width: 100%;
-    padding: 28px 352px;
+}
+
+.siteModile-menuItemAndTitle{
+    display: none;
 }
 
 .site-navHeader{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    padding: 28px 16px;
 }
 
 .site-logoCompany{
@@ -71,6 +78,13 @@
     right: 10px;
 
     background: var(--color-White);
+    z-index: 0;
+}
+
+.ModileLogoShar-while{
+    right: 10px;
+
+    background: var(--color-Light-gray);
     z-index: 0;
 }
 
@@ -121,23 +135,737 @@
 }
 
 /* Main */
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 80px;
+}
+
 .mainCallout{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    height: 960px;
+    width: 100%;
+    /* height: 960px; */
 
     text-align: center;
     color: var(--color-White);
 
-    padding: 313px 586px;
+    padding: 313px 21px;
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(42, 108, 234, .8), rgba(42, 108, 234, .8)), url("../img/Lunch_atop_a_Skyscraper.png");
 
     h3, h4{
         display: none;
+    }
+
+    p{
+        margin-top: 18px;
+    }
+}
+
+.mainCallout-btn{
+    display: block;
+    margin-top: 92px;
+    padding: 20px 40px;
+
+    border-radius: 4px;
+
+    color: var(--color-Black);
+    background: var(--color-Light-gray);
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    &:hover{
+        background: var(--color-White);
+    }
+}
+
+/* Как это работает */
+
+.blockWorks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 21px;
+}
+
+.blockWorks-allCards{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 32px;
+
+    margin-top: 61px;
+}
+
+.blockWorks-card{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 280px;
+
+    img{
+        max-width: 72px;
+        min-width: 56px;
+
+        max-height: 72px;
+        min-height: 56px;
+    }
+}
+
+.blockWorks-cardTextContent{
+    display: block;
+    margin-top: 16px;
+
+    h6{
+        color: var(--color-Black);
+    }
+    
+    p{
+        color: var(--color-Dark-gray);
+    }
+}
+
+/* 3-й блок */
+
+.thirdBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 32px;
+
+    margin: 0 21px;
+}
+
+.thirdBlock-cardTextContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 592px;
+
+    h3{
+        color: var(--color-Black);
+    }
+}
+.thirdBlock-cardText{
+    display: block;
+    margin-top: 18px;
+
+    color: var(--color-Dark-gray);
+}
+
+.thirdBlock-img{
+    display: flex;
+
+    max-width: 592px;
+    min-width: 351px;
+
+    max-height: 448px;
+    min-height: 265px;
+
+    .thirdBlock-imgPhoneMan{
+        position: relative;
+        max-width: 100%;
+
+        z-index: 1;
+    }
+
+    .thirdBlock-imgCar{
+        position: relative;
+        max-width: 100%;
+        right: 100%;
+
+        z-index: 0;
+    }
+}
+
+/* Отзывы */
+.blockReviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 57px 21px;
+    width: 100%;
+
+    background: var(--color-Extralight-gray);
+}
+
+.blockReviews-allCardsArowsPagination{
+    margin-top: 32px;
+}
+
+.blockReviews-allCardsAndArrow{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+}
+
+.blockReviews-arrow {
+    display: flex;
+    align-items: center;
+
+    height: 200px;
+    position: relative;
+}
+
+.blockReviews-arrow:hover svg path {
+    fill: var(--color-Primary);
+    transition: fill .4s ease;
+}
+
+.blockReviews-arrowRight{
+    transform: scale(-1);
+}
+
+
+.blockReviews-allCards{
+    display: flex;
+    justify-content: space-around;
+
+    gap: 32px;
+
+    width: 100%;
+}
+
+.blockReviews-cardReviews{
+    display: none;
+
+    width: 100%;
+    height: auto;
+    max-width: 352px;
+    
+    padding: 22px 22px 38px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    background: var(--color-White);
+    box-shadow: 0px 15px 24px 0px rgba(0, 0, 0, 10%);
+
+    &.hidder-1920{
+        display: none;
+    }
+
+    &.active{
+        display: block;
+    }
+}
+
+.blockReviews-usersReviews{
+    display: flex;
+    gap: 24px;
+}
+
+.blockReviews-imgUser{
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background: var(--color-Black);
+}
+
+.blockReviews-nameAndCityUsers{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h6{
+        color: var(--color-Black);
+    }
+
+    p{
+        color: var(--color-Dark-gray);
+    }
+}
+
+.blockReviews-textContent{
+    margin-top: 20px;
+    color: var(--color-Black);
+}
+
+
+.blockReviews-Pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 17px;
+    margin-top: 50px;
+
+    span{
+        display: block;
+        width: 8px;
+        height: 8px;
+
+        
+        border-radius: 50%;
+
+        background: var(--color-Mid-grey);
+    }
+
+    span.active{
+        background: var(--color-Primary);
+    }
+}
+
+/* Вопросы и Ответы */
+.blockQuestionsAndAnswers{
+    max-width: 1000px;
+    margin: 0 21px;
+}
+
+.blockQuestionsAndAnswers-blockContent{
+    display: block;
+
+    margin-top: 41px;
+}
+
+.blockQuestionsAndAnswers-contentTextAndTitlePlus{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 24px 0;
+
+    border-top: 2px solid var(--color-Extralight-gray);
+}
+
+.blockQuestionsAndAnswers-contentTitleAndPlus{
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: space-between;
+
+    label{
+        width: 100%;
+    }
+}
+
+.blockQuestionsAndAnswers-btnPlusOrClose{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    /* aspect-ratio: 1; */
+
+    border: 2px solid var(--color-Black);
+    border-radius: 50%;
+
+    transition: ease .5s;
+}
+
+.blockQuestionsAndAnswers-contentTitleAndPlus:hover label,
+.blockQuestionsAndAnswers-contentTitleAndPlus:hover .blockQuestionsAndAnswers-btnPlusOrClose, 
+.blockQuestionsAndAnswers-contentTitleAndPlus:hover .blockQuestionsAndAnswers-btnPlusOrClose svg path{
+    cursor: pointer;
+    
+    fill: var(--color-Primary);
+    color: var(--color-Primary);
+    border-color: var(--color-Primary);
+}
+
+.blockQuestionsAndAnswers-btnPlusOrClose.active{
+    transform: rotate(45deg);
+    
+}
+
+.blockQuestionsAndAnswers-contentText{
+    opacity: 0;
+    max-width: 940px;
+
+    color: var(--color-Dark-gray);
+
+    transition: opacity .7s ease-in-out;
+    height: 0;
+    overflow: hidden;
+
+    &.active{
+        opacity: 1;
+        height: auto;
+    }
+}
+
+
+/* Опрошенных пользовались микрокредитами */
+.blockMicrocreditInfo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 37px 32px;
+    padding: 68px 41px;
+    background: var(--color-Extralight-gray);
+}
+
+.blockMicrocreditInfo-contectCard{
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+
+    max-width: 592px;
+    height: 100%;
+}
+
+/* Отправить форму */
+.blockSendForms{
+    margin: 0 21px;
+}
+.blockSendForms-forms{
+    display: flex;
+    max-width: 800px;
+    min-width: 728px;
+    flex-direction: column;
+    gap: 30px;
+
+    margin-top: 44px;
+}
+
+.blockSendForms-formsTwoInput, .blockSendForms-checkboxAndButtonSend {
+    display: flex;
+    gap: 32px;
+}
+
+.blockSendForms-inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.blockSendForms-inputText{
+    display: block;
+    width: 100%;
+    
+    max-height: 64px;
+    padding: 16px;
+    
+    border: 2px solid var(--color-Extralight-gray);
+    border-radius: 4px;
+    
+    background: var(--color-Extralight-gray);
+    color: var(--color-Black);
+    
+    transition: all 0.2s ease;
+}
+
+.blockSendForms-inputText::placeholder{
+    color: var(--color-Mid-grey);
+}
+
+.blockSendForms-inputContainerLabel{
+    position: absolute;
+    top: 23px;
+    left: 17.5px;
+    color: var(--color-Dark-gray);
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.blockSendForms-inputText:focus,
+.blockSendForms-inputText:not(:placeholder-shown){
+    padding-top: 28px;
+    outline: none;
+    border: 2px solid var(--color-Mid-grey);
+}
+
+.blockSendForms-inputText:focus + .blockSendForms-inputContainerLabel,
+.blockSendForms-inputText:not(:placeholder-shown) + .blockSendForms-inputContainerLabel{
+    top: 10px;
+    left: 12px;
+    font-size: 14px;
+    color: var(--color-Black);
+    padding: 0 4px;
+
+    transition: .2s;
+}
+
+.blockSendForms-inputText-Error:focus,
+.blockSendForms-inputText-Error:not(:placeholder-shown){
+    display: none;
+    padding-top: 28px;
+    outline: none;
+    border: 2px solid var(--color-Dangerous);
+}
+
+.blockSendForms-imgTrue{
+    display: none;
+    position: absolute;
+
+    bottom: 35%;
+    left: 90%;
+}
+
+.blockSendForms-imgFulse{
+    display: none;
+    position: absolute;
+
+    bottom: 35%;
+    left: 90%;   
+}
+
+.blockSendForms-helperText{
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+
+    color: var(--color-Dangerous);
+}
+
+.blockSendForms-checkboxLabel{
+    display: flex;  
+    gap: 16px;
+    width: 100%;
+
+    input{
+        position: relative;
+        appearance: none;
+
+        width: 24px;
+        height: 24px;
+
+        border: 2px solid var(--color-Mid-grey);
+        border-radius: 4px;
+
+        cursor: pointer;
+        transition: .4s;
+
+        &:checked{
+            background-color: var(--color-Primary);
+            border-color: var(--color-Primary);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2.5px;
+                left: 6.5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    label{
+        color: var(--color-Black);
+    }
+}
+
+.blockSendForms-btnSend{
+    display: block;
+    padding: 20px 0;
+    cursor: pointer;
+
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+
+    color: var(--color-White);
+    background: var(--color-Primary);
+
+    transition: ease 0.3s;
+
+    &:hover{
+        background: var(--color-Primary-hover);
+    }
+}
+
+/* Footer */
+.site-footer{
+    display: block;
+
+    margin-top: 80px;
+    padding: 28px 21px;
+
+    border: 2px solid var(--color-Light-gray);
+
+    text-align: center;
+    color: var(--color-Black);
+}
+
+@media screen and (max-width: 1110px){
+    .blockReviews-cardReviews.hidder-1200{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .blockReviews-arrow{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .site-navHeader{
+        justify-content: space-between;
+    }
+    
+    .site-allMenuItem-title{
+        display: none;
+    }
+    
+    .hamburgerMenuItem{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        margin: 25px 20px;
+        
+        span{
+            width: 22px;
+            height: 2px;
+            background-color: var(--color-White);
+        }
+    }
+    
+    .siteModile-menuItemAndTitle.active {
+        display: block;
+        position: fixed;
+
+        width: 100%;
+        height: 100%;
+        background: var(--color-White);
+
+        z-index: 2;
+    }
+
+    .siteModile-menuLogoAndClose{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 28px 16px;
+    }
+
+    .siteModile-TitlelogoCompany{
+        color: var(--color-Black);
+    }
+
+    .siteMobile-btnClose{
+        display: flex;
+
+        width: 40px;
+        height: 24px;
+
+        span{
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-Black);
+
+            &:nth-child(1){
+                transform: rotate(45deg) translate(9.5px, -1px);
+            }
+
+            &:nth-child(2){
+                transform: rotate(-45deg) translate(-13.5px, -5px);
+            }
+        }
+    }
+
+    .siteModile-allMenuItem-title{
+        display: block;
+        list-style: none;
+
+        li 
+        {
+            padding: 16px;
+            a{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                text-decoration: none;
+
+                color: var(--color-Gray);
+            }
+        }
+    }
+
+    .mainCallout{
+        h1{
+            display: none;
+        }
+
+        h3{
+            display: block;
+        }
+    }
+
+    .blockWorks-card{
+        flex-direction: row;
+        gap: 16px;
+
+        max-width: 342px;
+    }
+
+    .thirdBlock-cardTextContent{
+        text-align: center;
+    }
+    
+    .thirdBlock{
+        flex-direction: column;
+    }
+
+    .thirdBlock-img{
+        max-width: 342px;
+        min-width: 280px;
+
+        min-height: 217.64px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blockReviews-cardReviews.hidder-700{
+        display: none;
+    }
+
+    .blockSendForms-forms{
+        min-width: 300px;
+    }
+
+    .blockSendForms-formsTwoInput, .blockSendForms-checkboxAndButtonSend{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .blockSendForms-formsTwoInput{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .mainCallout{
+        h3{
+            display: none;
+        }
+
+        h4{
+            display: block;
+        }
     }
 }
