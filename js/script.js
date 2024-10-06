@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const rightArrow = document.querySelector('.blockReviews-arrowRight')
     const paginationSpans = document.querySelectorAll('.blockReviews-Pagination span')
     const visibleCount = 3
-    const totalGroups = Math.ceil(reviews.length / visibleCount)
     let currentIndex = 0
 
     function showReviews(startIndex) {
