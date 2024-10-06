@@ -41,7 +41,7 @@
 .site-navHeader{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     padding: 28px 16px;
 }
@@ -132,6 +132,10 @@
     position: absolute;
     bottom: -5px;
     left: 0;
+}
+
+.hamburgerMenuItem{
+    display: none;
 }
 
 /* Main */
@@ -376,7 +380,7 @@ main{
 }
 
 .blockReviews-imgUser{
-    width: 44px;
+    min-width: 44px;
     height: 44px;
 
     border-radius: 50%;
@@ -472,10 +476,9 @@ main{
 
     border: 2px solid var(--color-Black);
     border-radius: 50%;
-
-    transition: ease .5s;
 }
 
+.blockQuestionsAndAnswers-btnPlusOrClose:hover,
 .blockQuestionsAndAnswers-contentTitleAndPlus:hover label,
 .blockQuestionsAndAnswers-contentTitleAndPlus:hover .blockQuestionsAndAnswers-btnPlusOrClose, 
 .blockQuestionsAndAnswers-contentTitleAndPlus:hover .blockQuestionsAndAnswers-btnPlusOrClose svg path{
@@ -484,11 +487,13 @@ main{
     fill: var(--color-Primary);
     color: var(--color-Primary);
     border-color: var(--color-Primary);
+
+    transition: ease .2s;
+
 }
 
 .blockQuestionsAndAnswers-btnPlusOrClose.active{
     transform: rotate(45deg);
-    
 }
 
 .blockQuestionsAndAnswers-contentText{
@@ -657,8 +662,8 @@ main{
             &::after {
                 content: '';
                 position: absolute;
-                top: 2.5px;
-                left: 6.5px;
+                top: 2px;
+                left: 6px;
                 width: 5px;
                 height: 10px;
                 border: solid white;
@@ -752,6 +757,11 @@ main{
         z-index: 2;
     }
 
+    .siteModile-menuLogoAndClose,
+    .siteModile-allMenuItem-title li{
+        border-bottom: 1px solid var(--color-Light-gray);
+    }
+
     .siteModile-menuLogoAndClose{
         display: flex;
         align-items: center;
@@ -825,10 +835,6 @@ main{
     .thirdBlock-cardTextContent{
         text-align: center;
     }
-    
-    .thirdBlock{
-        flex-direction: column;
-    }
 
     .thirdBlock-img{
         max-width: 342px;
@@ -838,9 +844,9 @@ main{
     }
 }
 
-@media screen and (max-width: 700px) {
-    .blockReviews-cardReviews.hidder-700{
-        display: none;
+@media screen and (max-width: 740px){
+    .thirdBlock{
+        flex-direction: column;
     }
 
     .blockSendForms-forms{
@@ -849,6 +855,12 @@ main{
 
     .blockSendForms-formsTwoInput, .blockSendForms-checkboxAndButtonSend{
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blockReviews-cardReviews.hidder-700{
+        display: none;
     }
 }
 

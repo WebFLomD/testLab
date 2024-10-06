@@ -34,14 +34,26 @@ function updateHeading() {
 
 
 
-    const heading = document.querySelector('.thirdBlock-cardTitle');
+    const heading = document.querySelector('.thirdBlock-cardTitle')
     if (window.innerWidth <= 840) {
-        heading.outerHTML = '<h5 class="thirdBlock-cardTitle">Круто, ты дошел до третьего блока</h5>';
+        heading.outerHTML = '<h5 class="thirdBlock-cardTitle">Круто, ты дошел до третьего блока</h5>'
     } else {
-        heading.outerHTML = '<h3 class="thirdBlock-cardTitle">Круто, ты дошел до третьего блока</h3>';
+        heading.outerHTML = '<h3 class="thirdBlock-cardTitle">Круто, ты дошел до третьего блока</h3>'
     }
+
+    const titleContent = document.querySelectorAll('.titleContent')
+    if (window.innerWidth <= 375) {
+        titleContent.forEach(element => {
+            element.outerHTML = '<h4 class="titleContent">Как это работает</h4>'
+        })
+    } else {
+        titleContent.forEach(element => {
+            element.outerHTML = '<h2 class="titleContent">Как это работает</h2>'
+        })
+    }
+
 }
 
 // Обновляем заголовок при загрузке страницы и изменении размера окна
-window.addEventListener('load', updateHeading);
-window.addEventListener('resize', updateHeading);
+window.addEventListener('load', updateHeading)
+window.addEventListener('resize', updateHeading)
